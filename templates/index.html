@@ -1,0 +1,28 @@
+{% extends "base.html" %}}
+
+{% block content %}
+    <h1>
+        Welcome to "This week in the ableVerse" a blog all about the AbleCorp!
+    </h1>
+
+    <h2>↓ Most recent posts ↓</h2>
+    <div class="header_container">
+        {% set blog_section = get_section(path="blog/_index.md") %}
+        {% for page in blog_section.pages | slice(end=2) %}        
+            <div class="header_image">
+                <a href="{{page.permalink}}">
+                    <img src="/images/{{page.title | safe }}.png" alt="{{page.title}}">
+                </a>
+                <div>
+                    <h3 style="text-align: center;">{{page.title}}</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a href="/blog/">
+        <h2 style="padding-bottom: 5%;">
+            View all posts
+        </h2>
+    </a>
+{% endblock content %}}

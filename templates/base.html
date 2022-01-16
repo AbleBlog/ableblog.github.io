@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AbleBlog</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<body>
+    <ul class="navbar_ul">
+        <li class="navbar_li"><a class="navbar_a" href="/">Home</a></li>
+        <li class="navbar_li"><a class="navbar_a" href="/blog">Archive</a></li>
+        <li class="navbar_li"><a class="navbar_a" href="/about">About</a></li>
+    </ul>
+    <section class="section">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </section>
+    <div class="footer">
+        Made with ❤️ by Blackfur - © 2022 AbleCorp 
+    </div>
+</body>
+
+</html>
